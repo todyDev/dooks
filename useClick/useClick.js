@@ -1,4 +1,7 @@
 export const useClick = (onClick) => {
+  if (typeof onClick !== "function") {
+    return;
+  }
   const reference = useRef();
   useEffect(() => {
     const element = reference.current;
@@ -10,6 +13,6 @@ export const useClick = (onClick) => {
         element.removeEventListener("click", onClick);
       }
     };
-  }, [onClick]);
+  }, []);
   return reference;
 };
