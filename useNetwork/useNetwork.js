@@ -1,8 +1,8 @@
-export const useNetwork = (onChange) => {
+export const useNetwork = (onNetworkChange) => {
   const [status, setStatus] = useState(navigator.onLine);
   const handleChange = () => {
-    if (typeof onChange === "function") {
-      onChange(navigator.onLine);
+    if (typeof onNetworkChange === "function") {
+      onNetworkChange(navigator.onLine);
     }
     setStatus(navigator.onLine);
   };
