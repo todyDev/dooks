@@ -1,8 +1,35 @@
-# usePreventLeave
-유저가 변경사항을 저장하지 않고 페이지를 벗어났을 때 확인하는 것.
+# @dooks/use-prevent-leave
 
-## 사용법
+## 설치 방법
+### npm
+```
+npm i @dooks/use-prevent-leave
+```
+### yarn
+```
+yarn add @dooks/use-prevent-leave
+```
+
+## 사용 방법
 ```node
+import usePreventLeave from "@dooks/use-prevent-leave"
+usePreventLeave()
+```
+### Arguments
+| 변수 | 타입 | 설명 | 기본값 | 필수 |
+|:---|:---|:---|:---|:--:|
+|  |  |  |  |  |
+
+### Return
+| 변수 | 타입 | 설명 | 기본값 |
+|:---|:---|:---|:---:|
+|  |  |  |  |
+
+### Example
+```node
+import React from "react";
+import usePreventLeave from "@dooks/use-prevent-leave";
+
 export default function App() {
   const { enablePrevent, disablePrevent } = usePreventLeave();
   return (
